@@ -11,7 +11,7 @@ interface Emp {
 	static double calcTotalIncome(Emp arr[]) {
 		double totalSal = 0.0;
 		for (Emp e : arr) {
-			totalSal = e.calcIncentives() + e.getSal();
+			totalSal += e.calcIncentives() + e.getSal();
 		}
 		return totalSal;
 	}
@@ -125,8 +125,8 @@ public class Employee {
 		arr[0] = new Manager(1000, 340);
 		arr[1] = new Labour(9, 450);
 		arr[2] = new Clerk(4000);
-		double income = Emp.calcTotalIncome(arr);
-		System.out.println(income);
+		double totalSalary = Emp.calcTotalIncome(arr);
+		System.out.println(totalSalary);
 	}
 
 }
